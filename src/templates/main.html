@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>Chaz Online</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- ol6-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+<!-- ol6-->
+
+<link rel="stylesheet" href="../static/css/main.css"/>
+<link rel="icon" href="../static/templates/favicon.ico"/>
+
+<style></style>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> WHO</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> WHAT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> WHERE</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">WHO</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">WHAT</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">WHERE</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CHAZ  <span class="w3-hide-small"></span>  ONLINE</span>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">WHO IS CHAZ?</h3>
+    <p class="w3-center"><em>Indeed. But...</em></p>
+    <p>Programming, aka "Software Development," or, most recently, "Software Engineering," which really means "implementing someone else's software."  Think "indentured servitude."  To whom, you ask?  Big Tech.  <!--And let's don't forget who and what <a href="https://www.iqt.org">In-Q-Tel</a> is.  If I have to explain <em>that</em>...sigh.  Every "coder" who uses a G--gle library ultimately works for them. --> You're not its only slaves; we are, too.</p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p> --><br>
+        <img src="../static/mywork/sentiment-0.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="250" height="150">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>I owned a business and so I needed to crunch numbers.  A natural aversion to repetitive tasks drove me to automate them. An aversion to risk meant that I could earn a better risk-weighted return as a programmer than I did as a trader.
+          <br><br>I avoided a career in tech for the same reason I avoided Van Halen records: I was put off by its constituency. Later in life I discovered that Eddie Van Halen [RIP] was a virtuoso, an innovator, an artist.  I also learned that repetitive tasks can be rather meditative.
+          <br><br>Enough about me.</p>
+          <!--It used to be fun and sometimes, a challenge.  The horizon was lined seemingly endless avenues of creativity wide-open to anyone inclined to take them.  A gift for problem solving, an affection for numbers...those were qualification enough begin a journey down one of those avenues of opportunity.  But reality didn't look like the teasers.  Too often, people inclined to this field are not "people" people.  Too often, they are often loners, obsessives, people who would rather spend a weekend playing Dungeons and Dragons;   Me, I would rather be amongst friends. I turned away from tech when I was young because I didn't like the person I could see it wanted to make me. -->
+        </p>
+      </div>
+    </div>
+    <p class="w3-large w3-center w3-padding-16">Ingredients:</p>
+    <p class="w3-wide"><i class="fa fa-lightbulb-o"></i>Imagination</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-hourglass-end"></i>Tenacity</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:115%">115%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-bolt"></i>Tech Chops</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+    </div>
+  </div>
+<!--
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">14+</span><br>
+      Partners
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">55+</span><br>
+      Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">89+</span><br>
+      Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">150+</span><br>
+      Meetings
+    </div>
+  </div>
+-->
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min" id="parallax" >
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">WHAT</span>
+    </div>
+  </div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">WHAT DOES CHAZ DO?</h3>
+  <p class="w3-center"><em>...In progress.<br>Click on an image to begin the adventure.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center" id="boxes">
+    <div class="w3-col m3" >
+      <img src="../static/mywork/sentiment-0.jpg" id="box-1" style="width:100%"  class="w3-hover-opacity" alt="Tell us what you really think...and we'll tell you how you really feel." data-modal-name="modal01">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="../static/map-animation/map-animation.gif"  id="box-2" style="width:100%" class="w3-hover-opacity"  alt="¿Donde esta?" data-modal-name="modal02">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="../static/mywork/whaaa.jpg" id="box-3" style="width:100%"  class="w3-hover-opacity" alt="Bear closeup" > <!--data-modal-name="modal03"> -->
+    </div>
+
+    <div class="w3-col m3">
+      <img src="../static/mywork/whaaa.jpg" id="box-4" style="width:100%"  class="w3-hover-opacity" alt="Quiet ocean">
+    </div>
+  </div>
+
+<!--
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+  -->
+
+</div>
+
+<!-- Modals for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" data-keyboard="false" data-backdrop="static">
+    <span name="closeModal" class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image" data-dismiss="modal"><i class="fa fa-remove" ></i></span>
+    <div class="w3-modal-content w3-animate-opacity w3-center w3-transparent w3-padding-64">
+      <!-- GRID -->
+        <div class="grid-container-modal-info">
+
+          <div class="item-info-0">
+            <p id="caption-modal01" class="w3-opacity w3-large"></p>
+          </div>
+
+          <div class="item-info-1">
+            <form  id="modalForm" data-backdrop="static" target="_blank">
+
+              <div class="w3-row-padding" style="margin:0 -16px 8px -16px"></div>
+                <input  id="emote" class="w3-input w3-border" type="text" placeholder="Emote" required name="input">
+              </div>
+
+              <div class="item-info-2">
+                <button type="button" class="button-modal-toolbar" id="btn-modalReset"/>
+                <label for="btn-modalReset"><i class="fa fa-refresh fa-lg"></i></label>
+              </div>
+
+              <div class="item-info-3">
+                <button type="submit" class="button-modal-toolbar" id="btn-modalSubmit" />
+                <label for="btn-buttonSubmit"><i class="fa fa-exclamation fa-lg"></i></label>
+              </div>
+            </form>
+
+        </div>
+        <!--End GRID-->
+    </div>
+</div>
+
+
+<!-- ===== -->
+
+<div id="modal02" class="w3-modal w3-black" data-keyboard="false" data-backdrop="static">
+
+    <span name="closeModal" class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image" data-dismiss="modal"><i class="fa fa-remove" ></i></span>
+
+    <div class="w3-modal-content w3-animate-opacity w3-center w3-transparent w3-padding-48">
+        <!-- <img id="img-02" class="w3-image"> -->
+        <p id="caption-modal02" class="w3-opacity w3-large"></p>
+
+       <div class="w3-content w3-container w3-padding-32 w3-center" id="imgMap">
+          <div class="modal-body" id="modal02-body">
+              <!--maps.html gets injected here! -->
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+<div id="modal03" class="w3-modal w3-black" role="dialog" data-keyboard="false" data-backdrop="static">
+
+    <span name="closeModal" class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image" data-dismiss="modal"><i class="fa fa-remove" ></i></span>
+
+    <div class="w3-modal-content w3-animate-opacity w3-center w3-transparent w3-padding-48">
+        <!-- <img id="img-02" class="w3-image"> -->
+        <p id="caption-modal03" class="w3-opacity w3-large"></p>
+
+       <div class="w3-content w3-container w3-padding-32 w3-center" id="imgMap">
+          <div class="modal-body" id="modal03-body">
+              <!--maps.html gets injected here! -->
+          </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- The modal01 Modal -->
+<div id="modalSentiment" class="w3-modal" role="dialog">
+  <div class="w3-modal-content">
+    <!-- Modal content-->
+    <div class="w3-modal-content">
+      <div class="modal-header">
+        <button type="button" id="btn-sentimentClose" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">How'd we do?</h4>
+        <!-- <p class="modal-text">Ispo facto, mumbo  jumbo..</p> -->
+      </div>
+      <div class="modal-body">
+        <div id="sentiment-box" style="display:block">
+                <form >
+                  <p align="center"></p>
+                    <section id="first" class="section">
+
+                      <div class="radio-toolbar">
+                          <input type="radio" id="radioPoint" name="radioButton" geometry="Point" />
+                          <label for="radioPoint"><i class="fa fa-map-marker fa-2x"></i></label>
+
+                          <span style="display:inline-block; width: 20px;"></span>
+
+                          <input type="radio" id="radioLine" name="radioButton" geometry="LineString" />
+                          <label for="radioLine"><i class="fa fa-arrows-h fa-2x"></i></label>
+
+                          <span style="display:inline-block; width: 20px;"></span>
+
+                          <input type="radio" id="radioPolygon" name="radioButton" geometry="Polygon" />
+                          <label for="radioPolygon"><i class="fa fa-pencil fa-2x"></i></label>
+                      </div>
+
+                    </section>
+                </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-sentimentClose1" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The modal Modal -->
+<div id="modalInfo" class="w3-modal" role="dialog">
+  <div class="w3-modal-content">
+    <!-- Modal content-->
+    <div class="w3-modal-content">
+      <div class="modal-header">
+        <button type="button" id="btn-infoClose" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Details</h4>
+        <p class="modal-text"></p>
+
+      </div>
+      <div class="modal-body" >
+        <div id="info-box" style="display:block">
+              <form id="sentimentForm" >
+                  <!-- enclose this in grid -->
+                <p align="center" id="p">
+                  <div class="radio-toolbar" id="modal-modal-radio" style="display:none" submissionID="99">
+                    <label id="pos">
+                      <input type="radio" id="radioSentGood" name="radioButtonSentiment" sentiment="pos" style="display:none"/>
+                      <img id = "pos" src="../static/sentiment/pos-0.jpg" alt="" />
+                    </label>
+
+                    <span style="display:inline-block; width: 20px;"></span>
+
+                    <label id="neg">
+                      <input type="radio" id="radioSentBad" name="radioButtonSentiment" sentiment="neg" style="display:none"/>
+                      <img id = "neg" src="../static/sentiment/neg-0.jpg" alt="" />
+                    </label>
+
+                    <span style="display:inline-block; width: 20px;"></span>
+
+                    <label id="meh">
+                      <input type="radio" id="radioSentMeh" name="radioButtonSentiment" sentiment="meh"  style="display:none"/>
+                      <img id = "meh" src="../static/sentiment/meh-0.jpg" alt="" />
+                    </label>
+                  </div>
+                </p>
+              </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-infoClose1" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="parallax">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">WHERE</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback! Well, maybe not love</em>...</p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%"> -->
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> New York, NY, US<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Tampa, FL, US<br>
+      <!--   <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br> -->
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: @gmail.com<br>
+      </div>
+      <p>Leave a note if you like, but I won't be able to read it because this feature is disabled at the moment.</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="button"> <!-- type="submit" -->
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+  <script type="text/javascript" src="../static/js/main.js"></script>
+
+
+</body>
+</html>

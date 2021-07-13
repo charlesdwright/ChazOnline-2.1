@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ol6-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <!-- ol6-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+
+     <!-- <script src="https://unpkg.com/elm-pep"></script> -->
+
+     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+     <script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+     <link rel="stylesheet" href="../static/css/maps.css"/>
+
+  </head>
+  <body>
+    <!--GRID-->
+    <form id="drawMenu" style="display:block">
+
+      <div class="grid-container">
+
+        <div class="grid-item item1" >
+          <div class="container" id = "leftButtons">
+          <div class="radio-toolbar">
+            <div>
+              <input type="radio" id="radioPoint" name="radioButton" geometry="Point"  />
+              <label for="radioPoint"><i class="fa fa-map-marker fa-lg"></i></label>
+            </div>
+              <span style="display:inline-block; width: 50px;" id="spacer"></span>
+            <div>
+              <input type="radio" id="radioLine" name="radioButton" geometry="LineString" />
+              <label for="radioLine"><i class="fa fa-arrows-h fa-lg"></i></label>
+            </div>
+              <span style="display:inline-block; width: 50px;" id="spacer"></span>
+            <div>
+              <input type="radio" id="radioPolygon" name="radioButton" geometry="Polygon" />
+              <label for="radioPolygon"><i class="fa fa-pencil fa-lg"></i></label>
+            </div>
+              <span style="display:inline-block; width: 50px;" id="spacer"></span>
+            <div>
+              <input type="radio" id="radioCircle" name="radioButton" geometry="Circle" />
+              <label for="radioCircle"><i class="fa fa-circle-thin fa-lg"></i></label>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="grid-item item2">
+          <div class="grid-item item2" id="map-box">
+            <div class="container" style="display:block">
+
+                <div id="map" class="map"></div>
+
+                <div id="marker" title="Marker" style="display:none"></div>
+            </div>
+          </div>
+        </div>
+    </form>
+
+        <div class="grid-item item3">
+          <div class="container" id="rightButtons">
+            <div class="radio-toolbar">
+              <div>
+                <input type="button"  id="buttonInfo" name="buttonInfo" value="Info"  />
+                <label for="buttonInfo"><i class="fa fa-info"></i></label>
+              </div>
+
+                <span style="display:inline-block; width: 50px;" id="spacer"></span>
+
+              <div>
+                <input type="button" id="buttonHome" name="buttonHome" value="Home" />
+                <label for="buttonHome"><i class="fa fa-home"></i></label>
+              </div>
+
+              <span style="display:inline-block; width: 50px;" id="spacer"></span>
+
+              <div>
+                <input type="button" id="buttonRefresh" name="buttonRefresh" value="Refresh" />
+                <label for="buttonRefresh"><i class="fa fa-refresh"></i></label>
+              </div>
+
+              <span style="display:inline-block; width: 50px;" id="spacer"></span>
+            </div>
+              <div id="buttonModify" name="buttonModify" value="Modify" modify="false">
+                 <label>
+                     <input type="checkbox" ><span><i class="fa fa-wrench"></i></span></input>
+                 </label>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- hack to monitor ol load -->
+      <!-- <div id="olState">yermammy!</div>
+      </div> -->
+
+
+
+    <!--End GRID-->
+    <script type="text/javascript" src="../static/js/maps.js"></script>
+  </body>
+</html>
